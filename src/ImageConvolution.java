@@ -13,7 +13,7 @@ public class ImageConvolution {
         InputStream in = url.openStream();
 
         if (in == null) {
-            throw new RuntimeException("For this tests you need a file pinup.jpg available in the classpath!");
+            throw new RuntimeException();
         }
 
         image = Image.build(ImageIO.read(in));
@@ -21,28 +21,6 @@ public class ImageConvolution {
 
         try {
             filterToFile("blurred.png", new int[]{
-                    1, 1, 1, 1, 1, 1, 1, 1, 1,
-                    1, 2, 2, 2, 2, 2, 2, 2, 1,
-                    1, 2, 4, 4, 4, 4, 4, 2, 1,
-                    1, 2, 4, 8, 8, 8, 4, 2, 1,
-                    1, 2, 4, 8, 16, 8, 4, 2, 1,
-                    1, 2, 4, 8, 8, 8, 4, 2, 1,
-                    1, 2, 4, 4, 4, 4, 4, 2, 1,
-                    1, 2, 2, 2, 2, 2, 2, 2, 1,
-                    1, 1, 1, 1, 1, 1, 1, 1, 1
-            });
-
-            filterToFile("blurred2.png", new int[]{
-                    1, 1, 1, 1, 1, 1, 1,
-                    1, 2, 2, 2, 2, 2, 1,
-                    1, 2, 4, 4, 4, 2, 1,
-                    1, 2, 4, 8, 4, 2, 1,
-                    1, 2, 4, 4, 4, 2, 1,
-                    1, 2, 2, 2, 2, 2, 1,
-                    1, 1, 1, 1, 1, 1, 1,
-            });
-
-            filterToFile("blurred3.png", new int[]{
                     1, 1, 1, 1, 1,
                     1, 2, 2, 2, 1,
                     1, 2, 4, 2, 1,
